@@ -11,6 +11,7 @@ class Meanwhile < Formula
   def install
     system "./configure", "--disable-dependency-tracking",
                           "--disable-debug",
+                          "--enable-doxygen=no",
                           "--prefix=#{prefix}"
     system "make"
     system "make install"
