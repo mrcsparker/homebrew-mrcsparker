@@ -8,8 +8,11 @@ class Meanwhile < Formula
 
   depends_on 'pkg-config' => :build
   depends_on 'glib'
+  depends_on 'libtool'
+  depends_on 'automake'
 
   def install
+    system "./autogen.sh"
     system "./configure", "--disable-dependency-tracking",
                           "--disable-debug",
                           "--enable-doxygen=no",
