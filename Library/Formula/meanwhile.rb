@@ -1,9 +1,10 @@
 require 'formula'
 
 class Meanwhile < Formula
-  url 'https://github.com/downloads/mrcsparker/meanwhile/meanwhile-1.1.1.tar.gz'
-  sha1 'dee577b129f123448c2dfbc93640e827830c3090'
   homepage 'http://meanwhile.sourceforge.net'
+  head 'https://github.com/mrcsparker/meanwhile.git', :using => :git, :tag => '1.1.1'
+  url 'https://github.com/mrcsparker/meanwhile/archive/1.1.1.tar.gz'
+  sha1 '2c3446ed04e58781aa3803c83f5cbc7deef6dd8b'
 
   depends_on 'pkg-config' => :build
   depends_on 'glib'
